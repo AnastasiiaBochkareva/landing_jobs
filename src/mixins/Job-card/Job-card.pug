@@ -1,0 +1,19 @@
+mixin Job-card(param={})
+    .job-card
+        .job-card__location 
+            +icon('map')
+            span Москва
+        .job-card__title=param.title
+        if(param.seePrice)
+            .job-card__price=param.price
+        .job-card__subtitle=param.subtitle
+        .job-card__tags
+            ul.tags__list
+                li Продажи
+                li До года
+                li Удалённо
+                li Частичная/полная
+            a(href="#").tags__share 
+                +icon('arrow-share')
+                span.share Поделиться
+        a(href="#").job-card__btn.btn.btn_primary Подробнее

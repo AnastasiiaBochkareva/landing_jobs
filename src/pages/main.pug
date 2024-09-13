@@ -6,6 +6,10 @@ block variables
 
 block content
 
-    section.section
-
+    section.section.job-container
+        .job-wrapper
+            +Job-controles({})
+            +Job-filter({})
+            +Job-selected({})
+            +Job-list({})
     include _modals

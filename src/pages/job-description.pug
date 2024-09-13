@@ -1,0 +1,13 @@
+extends ../templates/main
+
+block variables
+    - const title = 'Главная'
+    - const description = 'Описание главной страницы'
+
+block content
+        section.bg-lavender.bg-bottom-radius
+            .section.job-container
+                +Job-banner({})
+        section.bg-light-lavender.bg-radius
+            .section.job-container
+                +Job-info({})

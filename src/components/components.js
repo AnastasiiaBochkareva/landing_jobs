@@ -13,6 +13,8 @@ import '@/components/ui/СhoosingСity/ChoosingCity';
 import '@/components/ui/scrollTo/scrollTo';
 import '@/components/ui/Tabs/TabsNav';
 
+import '@/mixins/Job-controles/Job-controles';
+
 import MyModal from '@/components/ui/MyModal/MyModal';
 import Filters from '@/components/ui/Filters/Filters';
 import Validation from '@/components/ui/Form/Validation';

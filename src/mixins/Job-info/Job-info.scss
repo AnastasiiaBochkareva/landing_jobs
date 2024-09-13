@@ -1,0 +1,55 @@
+.job-info{
+    &__title{
+        font-family: 'YS Text';
+        font-weight: 700;
+        font-size: 3.2rem;
+        line-height: 106%;
+        letter-spacing: -0.2px;
+        padding-bottom: 2.5rem;
+        color: #655DE5;
+    }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        list-style: none;
+        li{
+            position: relative;
+            display: flex;
+            padding-left: 1.5rem;
+            align-items: center;
+            font-family: 'YS Text';
+            font-weight: 400;
+            font-size: 2.6rem;
+            line-height: 110%;
+            letter-spacing: calc(1em / -40);
+            color: #717F96;
+            &::before{
+                position: absolute;
+                content: '';
+                width: 0.5rem;
+                height: 0.5rem;
+                background-color: #655DE5;
+                display: block;
+                left: 0;
+                top: 1.1rem;
+                border-radius: 50%;
+            }
+        }
+    }
+    @media (max-width: 979px){
+        padding: 2rem 4rem 0;
+    }
+    @media (max-width: 700px) {
+        &__title{
+            font-size: 2.4rem;
+            line-height: 104%;
+        }
+        &__list{
+            gap: 1.5rem;
+            li{
+            font-size: 1.8rem;
+            }
+        }
+    }
+}

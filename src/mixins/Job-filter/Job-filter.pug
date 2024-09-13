@@ -1,0 +1,55 @@
+mixin Job-filter(param={})
+    .job-filter
+        .job-filter__container
+            .job-filter__top
+                .job-filter__title Фильтры
+                button.job-filter__btn-close    
+                    +icon("close")
+            .job-filter__skills.skills
+                ul.job-filter__list
+                    li
+                        .skills__title Направление
+                        ul.skills__list
+                            li  
+                                +Checkbox({text: 'Поддержка'})
+                            li  
+                                +Checkbox({text: 'Нейросети'})
+                            li  
+                                +Checkbox({text: 'Бэк-офис'})
+                            li  
+                                +Checkbox({text: 'Качество продуктов'})
+                            li  
+                                +Checkbox({text: 'Продажи'})
+                            li  
+                                +Checkbox({text: 'Контент'})
+                            li  
+                                +Checkbox({text: 'Пешеходы'})
+                    li
+                        .skills__title Опыт
+                        ul.skills__list
+                            li  
+                                +Checkbox({text: 'Без опыта'})
+                            li  
+                                +Checkbox({text: 'От 1 года'})
+                            li  
+                                +Checkbox({text: 'До года'})
+                            li  
+                                +Checkbox({text: 'Более 2 лет'})
+                    li
+                        .skills__title Тип занятости
+                        ul.skills__list
+                            li  
+                                +Checkbox({text: 'Полная'})
+                            li  
+                                +Checkbox({text: 'Частичная'})
+                    li
+                        .skills__title Формат работы
+                        ul.skills__list
+                            li  
+                                +Checkbox({text: 'Удалённо'})
+                            li  
+                                +Checkbox({text: 'Локально'})
+            .job-filter__bottom
+                .job-filter__btn.btn.btn-clear Очистить фильтры
+                .job-filter__btn.btn.btn__apply.btn_primary Применить
+                .job-filter__btn.btn.btn__clear-mob Сбросить всё

@@ -18,7 +18,7 @@
 
 html {
   font-family: 'Ubuntu', sans-serif;
-  font-size: 15px;
+  font-size: 10px;
   line-height: 26px;
 }
 
@@ -29,15 +29,18 @@ img {
 }
 
 body {
-  font-size: 1rem;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 26px;
   overflow-x: hidden;
-  background: #e4e4e4;
+  background: #F7F8FB;
 }
 
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 *,
@@ -66,4 +69,53 @@ ul {
 .svg-icon {
   width: 24px;
   height: 24px;
+}
+
+.job-wrapper{
+  display: grid;
+  grid-template-columns: 28rem 1fr;
+  grid-template-rows: auto 1fr;
+  row-gap: 2.8rem;
+  column-gap: 7.2rem;
+  @include sm{
+    row-gap: 1.8rem;
+    column-gap: 2.6rem;
+  }
+  @media (max-width: 979px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    row-gap: 2.8rem;
+    column-gap: 0;
+  }
+  @media (max-width: 767px) {
+    row-gap: 1.6rem;
+}
+
+
+}
+.job-container{
+  max-width: 123.2rem;;
+  margin: 0 auto;
+  padding: 3.4rem 1.6rem 13rem;
+  @media (max-width: 1024px) {
+    padding: 2.8rem 1.6rem 9rem;
+  }
+  @media (max-width: 979px) {
+    padding: 2rem 1.6rem 9rem;
+  }
+  @media (max-width: 700px) {
+        padding: 1rem 0 4rem;
+  }
+}
+.bg-lavender{
+  background-color: #DDD8FF;
+}
+.bg-light-lavender{
+  background-color: #F2F0FD;
+}
+.bg-bottom-radius{
+  border-radius: 0 0 6rem 6rem;
+}
+.bg-radius{
+  border-radius: 6rem;
 }

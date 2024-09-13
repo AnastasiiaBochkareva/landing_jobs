@@ -1,0 +1,209 @@
+.job-filter{
+    grid-row: 1 / 4;
+    position: relative;
+    &__container{
+        position: sticky;
+        top: 0;
+        overflow: auto;
+        max-width: 28rem;
+        width: 100%;
+    }
+    &__top{
+        position: relative;
+        padding-bottom: 4.2rem;
+        display: none;
+        padding: 2.4rem 1.6rem;
+    }
+    &__list{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 3.6rem;
+    }
+    &__bottom{
+        // position: relative;
+        padding-top: 3.6rem;
+        display: flex;
+        flex-direction: column;
+    }
+    &__btn{
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .btn{
+        &__apply{
+            display: none;
+        }
+        &__clear-mob{
+            display: none;
+        }
+    }
+    .skills{
+        &__list{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.6rem;
+        }
+        &__title{
+            margin: 0;
+            margin-bottom: 2.4rem;
+            font-family: 'YS Text';
+            font-weight: 400;
+            font-size: 2rem;
+            line-height: 110%;
+            letter-spacing: -0.02em;
+            color: #717F96;
+        }
+    }
+    @include sm{
+        &__skills{
+            gap: 2.8rem;
+        }
+        &__list{
+            gap: 2.8rem;
+        }
+        .skills{
+            &__title{
+                margin-bottom: 1.8rem;
+                 font-size: 1.8rem;
+            }
+        }
+        &__bottom{
+            padding-top: 2.6rem;
+        }
+    }
+    @media (max-width: 979px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2001;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 0;
+        display: none;
+        &.active{
+            display: block;
+            background-color: #fff;
+            .job-filter{
+                &__container{
+                    position: relative;
+                    top: 0;
+                    max-width: 100%;
+                    height: 100%;
+                    border-radius: 0;
+                    height: 100%;
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                }
+                &__skills{
+                    padding: 0 1.6rem 2.8rem 1.6rem;
+                    gap: 1.6rem;
+                    overflow-y: scroll;
+                    
+                }
+                &__top{
+                    display: flex;
+                    padding: 2.4rem 1.6rem;
+                    font-size: 2rem;
+                    line-height: 100%;
+                    letter-spacing: -0.05rem;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0;
+                    font-family: 'YS Text';
+                    font-weight: 700;
+                    color: rgba(20, 20, 20, 0.86);
+                }
+                &__btn-close  {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    width: 5.6rem;
+                    height: 5.6rem;
+                    transform: translateY(-50%);
+                }
+                
+                &__list{
+                    gap: 1.6rem;
+                    overflow-y: scroll;
+                    li{
+                        .skills{
+                            &__title{
+                                margin-bottom: 1.4rem;
+                                font-weight: 500;
+                                font-size: 1.8rem;
+                                line-height: 140%;
+                                letter-spacing: -0.05rem;
+                                color: rgba(20, 20, 20, 0.86);
+                            }
+                            &__list{
+                                display: grid;
+                                grid-template-columns: 1fr 1fr;
+                                column-gap: 0.8rem;
+                                row-gap: 1.4rem;
+                                
+                            }
+                        }
+                        &:not(:last-of-type){
+                            .skills__list{
+                                padding-bottom: 1.6rem;
+                                border-bottom: 1px solid rgba(113, 127, 150, 0.08);
+
+                            }
+                        }
+                    }
+                }
+                &__bottom{
+                    margin-top: auto;
+                    padding: 1.6rem 1.6rem 0.4rem 1.6rem;
+                    box-shadow: 0 0.4rem 2.4rem rgba(0, 0, 0, 0.16);
+                    border-radius: 1.6rem 1.6rem 0 0;
+                    .btn-clear{
+                        display: none;
+                    }
+                    .btn{
+                        &__apply{
+                            display: flex;
+                            max-width: 52rem;
+                            padding: 1.2rem 1.6rem;
+                            margin: 0 auto;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 1.2rem;
+                            opacity: 0.8;
+                            transition: all 0.3s ease;
+                            font-family: 'YS Text';
+                            font-weight: 500;
+                            font-size: 1.6rem;
+                            line-height: 125%;
+                            letter-spacing: -0.002em;
+                        }
+                        &__clear-mob{
+                            display: block;
+                            font-size: 1.3rem;
+                            font-weight: 400;
+                            line-height: 138%;
+                            color: rgba(20, 20, 20, 0.86);
+                            font-family: 'YS Text';
+                            letter-spacing: -0.002em;
+                            border-radius: 1.2rem;  
+                            &:hover{
+                                background-color: #E3E8F0;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+        
+    }
+}

@@ -532,10 +532,11 @@
 
   &:hover {
     .checkbox__label {
-      color: $text-1;
+      // color: $text-1;
 
       &::before {
-        border-color: $ui-primary;
+        border-color: #9FBBEF;
+        
       }
     }
   }
@@ -548,8 +549,8 @@
     &:checked {
       + .checkbox__label {
         &::before {
-          border-color: $ui-primary;
-          background-color: $ui-primary;
+          border-color: #9FBBEF;
+          background-color: #9FBBEF;
         }
         &::after {
           display: block;
@@ -600,32 +601,59 @@
   }
 
   &__label {
-    height: 20px;
-    font-size: 1rem;
-    line-height: 1.47;
-    color: $text-2;
+    // height: 20px;
+    // font-size: 1rem;
+    // line-height: 1.47;
+    // color: #717F96;
     transition: color $transition;
-    width: 100%;
+    // width: 100%;
     cursor: pointer;
 
+    font-family: 'YS Text';
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 110%;
+    letter-spacing: -0.01em;
+    color: #717F96;
+
     &::before {
-      content: '';
-      background-color: #ffffff;
-      border-radius: 2px;
+      // content: '';
+      // background-color: #ffffff;
+      // border-radius: 2px;
       left: 0;
-      height: 20px;
+      // height: 20px;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: 20px;
-      border: 1px solid $ui-gray-1;
-      transition: border-color $transition;
-      cursor: pointer;
+      // width: 20px;
+      // // border: 1px solid $ui-gray-1;
+      // border: 0.2rem solid #CDD5E3;
+      // border-radius: 0.7rem;
+      // transition: border-color $transition;
+      // cursor: pointer;
+
+      content: '';
+      width: 2rem;
+      height: 2rem;
+      // margin-right: 1.2rem;
+      // margin-left: 0.1rem;
+      display: inline-block;
+      // flex-shrink: 0;
+      // flex-grow: 0;
+      border: 0.2rem solid #CDD5E3;
+      border-radius: 0.7rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 1.2rem;
+      background-color: #fff;
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+
     }
 
     &:after {
       content: '';
-      border: solid $ui-white;
+      border: solid black;
       border-width: 0 1.5px 1.5px 0;
       display: none;
       height: 10px;
@@ -636,6 +664,18 @@
       width: 5px;
       cursor: pointer;
     }
+    @include sm{
+      font-size: 1.6rem;
+    }
+    @media (max-width: 979px) {
+          align-items: flex-start;
+          &:before{
+            width: 1.8rem;
+            height: 1.8rem;
+            border-radius: 0.6rem;
+            margin-right: 1rem;
+          }
+  }
   }
 
   &_reverse {
